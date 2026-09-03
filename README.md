@@ -26,73 +26,6 @@ Mock tests are free (ad-supported). Premium is a **one-time ₹99 purchase**
 
 ---
 
-## Files
-
-```
-index.html        Landing page (hero, features, try-a-question, exams, pricing, FAQ, disclosure, CTA)
-privacy.html      Privacy Policy (required for Play Console data-safety form)
-terms.html        Terms of Service
-404.html          Branded 404 (served automatically by GitHub Pages)
-og-image.png      1200x630 share preview (WhatsApp / Telegram / Facebook)
-robots.txt        Search-bot rules
-sitemap.xml       URL list for search engines
-assets/css/main.css   Shared styles (palette + layout + all interactive states)
-assets/js/main.js     Shared JS (cursor, GSAP animations, canvas, tilt, quiz)
-assets/img/app-icon.png   App icon with name (CTA + footer tiles, og-image)
-assets/img/app-icon-touch.png Splash-shield icon (apple-touch-icon)
-assets/img/icon-64.png    Optimized favicon (tab icon, from the splash shield)
-README.md         This file
-```
-
-External dependencies (loaded from CDN at runtime, never installed):
-
-- Fonts: Google Fonts (Space Grotesk, IBM Plex Sans, IBM Plex Mono)
-- Animation: GSAP 3.12.5 + ScrollTrigger from cdnjs.cloudflare.com
-
-**Fail-safe:** every animation is an enhancement. If JS or the CDN is blocked,
-or the visitor has `prefers-reduced-motion` on, the page is fully readable
-with the default cursor and no movement.
-
----
-
-## Preview locally
-
-Any of these:
-
-1. Double-click `index.html` in your file manager, or
-2. `python -m http.server 8080` (then open http://localhost:8080), or
-3. VS Code / GitHub Desktop live-server extension.
-
-Test on a phone viewport (DevTools → device toolbar) — the audience is mobile-first.
-
----
-
-## Deploy to GitHub Pages
-
-1. **Create a new repo** on GitHub, e.g. `mission-khaki-website`
-   (keep it **public** — GitHub Pages on free accounts needs a public repo,
-   and the privacy URL must be public for Play Console anyway).
-2. **Push the files** to it:
-
-   ```
-   git init
-   git add .
-   git commit -m "Mission Khaki marketing site"
-   git branch -M main
-   git remote add origin https://github.com/YOUR_USERNAME/mission-khaki-website.git
-   git push -u origin main
-   ```
-
-   (Or: create the repo on GitHub, then drag-drop the 6 files into it.)
-3. **Enable Pages:** repo → **Settings → Pages** →
-   *Build and deployment* → **Source: Deploy from a branch** →
-   **Branch: `main`**, folder **`/ (root)`** → **Save**.
-4. Wait ~1–5 minutes. Your site is live at:
-
-   ```
-   https://YOUR_USERNAME.github.io/mission-khaki-website/
-   ```
-
    Privacy/Terms URLs (for Play Console):
 
    ```
@@ -106,58 +39,6 @@ Test on a phone viewport (DevTools → device toolbar) — the audience is mobil
 
 ---
 
-## Add a custom domain (e.g. `missionkhaki.in` or `missionkhaki.com`)
-
-1. Buy the domain from any registrar (GoDaddy, Namecheap, .in registry, etc.).
-2. In your repo: **Settings → Pages → Custom domain** → type
-   `missionkhaki.in` → **Save**.
-3. Add DNS records at your registrar (point them at GitHub Pages):
-
-   | Host  | Type  | Value               | TTL  |
-   |-------|-------|---------------------|------|
-   | `@`   | A     | `185.199.108.153`   | Auto |
-   | `@`   | A     | `185.199.109.153`   | Auto |
-   | `@`   | A     | `185.199.110.153`   | Auto |
-   | `@`   | A     | `185.199.111.153`   | Auto |
-   | `www` | CNAME | `YOUR_USERNAME.github.io` | Auto |
-
-   **Note:** the four A-records above are GitHub Pages’ canonical addresses
-   for the apex domain (`@` / `missionkhaki.in`). If you’re hosting on the
-   `gh-pages` subdomain instead, the four A-records are `192.0.66.2`,
-   `192.0.66.18`, `192.0.66.22`, `192.0.66.34`.
-
-4. Tick **“Enforce HTTPS”** in Pages settings.
-5. Propagation usually takes minutes (up to 24–48h worst case). GitHub issues
-   SSL automatically — you should see `https://missionkhaki.in` with a valid
-   certificate shortly after.
-
-After this, the old `YOUR_USERNAME.github.io/...` URL still redirects —
-no need to change anything else.
-
----
-
-## Before launch — status
-
-No placeholders left in the HTML. Already set:
-
-- **Play Store links** (all 3 pages): `https://play.google.com/store/apps/details?id=com.rupjyoti.missionkhaki`
-- **Privacy / Terms effective date:** 3 September 2026
-- **Jurisdiction (Terms §12):** Assam, India
-- **`robots.txt` / `sitemap.xml`:** `https://MadB0i.github.io/Mission_Khaki`
-
-Remaining (optional / after launch):
-
-- **Custom domain** (e.g. `missionkhaki.in`): follow the steps above, then
-  update the URLs in `sitemap.xml`, `robots.txt`, and set `og:image` to the
-  absolute URL.
-- **og-image preview:** if WhatsApp/Telegram/Facebook show a broken link
-  preview, change `og:image` in `index.html` from the relative `og-image.png`
-  to the absolute URL (`https://MadB0i.github.io/Mission_Khaki/og-image.png`)
-  and push again.
-- **Hero stats** (e.g. “4,000+ practice questions”): update to your real
-  numbers — they’re in `<span data-count="4000" ...>`.
-
----
 
 ## Play Console notes
 
@@ -170,17 +51,3 @@ Remaining (optional / after launch):
   organisation” statement appears on the landing page and in both legal
   docs — don’t remove it; Google checks listings for misleading claims of
   endorsement, and your app is independent.
-
----
-
-## Tweaking the design
-
-- **Colors** — everything is a CSS custom property at the top of
-  `assets/css/main.css` (`:root`). The palette: khaki-paper `#EEEFE6`,
-  deep olive ink `#1B2016`, primary olive `#4E5C2F`, khaki `#A9AE8C`,
-  dark band `#161A10`.
-- **Typography** — swap the Google Fonts `<link>` and the `--font-*`
-  variables.
-- **Animation intensity** — all motion lives in `assets/js/main.js` and is
-  gated behind `prefers-reduced-motion` + pointer feature detection; delete a
-  block (e.g. the tilt or magnetic section) to disable it site-wide.
