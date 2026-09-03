@@ -24,22 +24,6 @@ Mock tests are free (ad-supported). Premium is a **one-time purchase**
 > with any government or defence organisation** — keep these visible; they are
 > also required for an honest Google Play listing.
 
----
-
-   Privacy/Terms URLs (for Play Console):
-
-   ```
-   https://YOUR_USERNAME.github.io/mission-khaki-website/privacy.html
-   https://YOUR_USERNAME.github.io/mission-khaki-website/terms.html
-   ```
-
-   > **Tip:** if you name the repo exactly `YOUR_USERNAME.github.io`,
-   > the site becomes your *user site* at `https://YOUR_USERNAME.github.io`
-   > (without the `/mission-khaki-website` suffix) — slightly cleaner URLs.
-
----
-
-
 ## Play Console notes
 
 - **Data safety form:** point the “Privacy policy” field at your
