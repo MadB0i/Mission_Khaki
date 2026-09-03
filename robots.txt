@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://MadB0i.github.io/Mission_Khaki/sitemap.xml
