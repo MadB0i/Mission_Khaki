@@ -16,7 +16,7 @@ and instant English / Hindi / Assamese translation in the middle of a test —
 for Army Agniveer, Assam Police (SI / Constable), SSC (GD / CHSL / MTS / CGL)
 and CAPF (CRPF / BSF / CISF / ITBP / SSB) aspirants.
 
-Mock tests are free (ad-supported). Premium is a **one-time ₹99 purchase**
+Mock tests are free (ad-supported). Premium is a **one-time purchase**
 — Grand Mocks (100-question papers) and study notes, for life. No subscription.
 
 > Mission Khaki is an independent, privately developed app. The site clearly

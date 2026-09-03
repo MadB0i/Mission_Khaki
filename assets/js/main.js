@@ -380,7 +380,7 @@
   /* ---------- WhatsApp share: append the live page URL at runtime ---------- */
   var waShare = document.getElementById('wa-share');
   if (waShare) {
-    var waText = 'Mission Khaki — free mock tests for Army, Police, SSC & CAPF aspirants. Real negative marking, EN/HI/ASM in-test. Premium 99 rupees one-time, no subscription.';
+    var waText = 'Mission Khaki — free mock tests for Army, Police, SSC & CAPF aspirants. Real negative marking, EN/HI/ASM in-test. Premium is a one-time payment, no subscription.';
     waShare.setAttribute('href', 'https://wa.me/?text=' + encodeURIComponent(waText + ' ' + window.location.href));
   }
 
