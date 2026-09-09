@@ -365,6 +365,13 @@
   var chipGroup = document.querySelector('[data-lang-chips]');
   if (chipGroup) {
     var chips = chipGroup.querySelectorAll('button[data-lang]');
+    var langCode = chipGroup.querySelector('[data-lang-code]');
+    var langCopy = chipGroup.querySelector('[data-lang-copy]');
+    var langDemo = {
+      en: { code: 'EN', text: 'Translate the question instantly while your timer keeps running.' },
+      hi: { code: 'हिन्दी', text: 'टाइमर चलता रहे, सवाल का तुरंत हिन्दी में अनुवाद करें।' },
+      as: { code: 'অসমীয়া', text: 'টাইমাৰ চলি থাকোঁতেই প্ৰশ্নটো অসমীয়ালৈ তৎক্ষণাত অনুবাদ কৰক।' }
+    };
     Array.prototype.forEach.call(chips, function (c) {
       c.addEventListener('click', function () {
         Array.prototype.forEach.call(chips, function (o) {
@@ -373,6 +380,11 @@
         });
         c.classList.add('is-active');
         c.setAttribute('aria-pressed', 'true');
+        var selected = langDemo[c.getAttribute('data-lang')];
+        if (selected && langCode && langCopy) {
+          langCode.textContent = selected.code;
+          langCopy.textContent = selected.text;
+        }
       });
     });
   }

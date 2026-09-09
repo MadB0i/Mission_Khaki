@@ -279,10 +279,16 @@
               Switch languages whenever you need to — your timer keeps running,
               just like the real thing.
             </p>
-            <div class="mini-visual lang-chips" data-lang-chips role="group" aria-label="Languages available in the app (demo)">
-              <button type="button" data-lang="en" aria-pressed="false">English</button>
-              <button type="button" data-lang="hi" class="is-active" aria-pressed="true" lang="hi">हिन्दी</button>
-              <button type="button" data-lang="as" aria-pressed="false" lang="as">অসমীয়া</button>
+            <div class="mini-visual lang-demo" data-lang-chips role="group" aria-label="Languages available in the app (demo)">
+              <div class="lang-chips">
+                <button type="button" data-lang="en" class="is-active" aria-pressed="true">English</button>
+                <button type="button" data-lang="hi" aria-pressed="false" lang="hi">हिन्दी</button>
+                <button type="button" data-lang="as" aria-pressed="false" lang="as">অসমীয়া</button>
+              </div>
+              <div class="lang-demo-panel" aria-live="polite">
+                <span class="lang-demo-code" data-lang-code>EN</span>
+                <p data-lang-copy>Translate the question instantly while your timer keeps running.</p>
+              </div>
             </div>
           </article>
 

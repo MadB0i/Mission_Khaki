@@ -803,6 +803,29 @@ main section[id] { scroll-margin-top: calc(var(--nav-h) + 16px); }
   border-color: var(--ink);
   color: var(--paper);
 }
+.lang-demo { display: grid; gap: 16px; }
+.lang-demo-panel {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  gap: 12px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+  padding: 14px;
+}
+.lang-demo-code {
+  display: grid;
+  min-width: 34px;
+  min-height: 26px;
+  place-items: center;
+  padding: 4px 6px;
+  background: var(--olive);
+  color: var(--paper);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+}
+.lang-demo-panel p { margin: 0; font-size: 0.86rem; line-height: 1.5; }
 
 /* price stamp */
 .stamp {
