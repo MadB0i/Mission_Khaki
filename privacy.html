@@ -65,7 +65,7 @@
         </a>
         <p class="disc-tag">Legal</p>
         <h1>Privacy Policy</h1>
-        <p class="legal-updated">Last updated: <time datetime="2026-09-03">3 September 2026</time></p>
+        <p class="legal-updated">Last updated: <time datetime="2026-10-06">6 October 2026</time></p>
         <p class="legal-intro">
           Mission Khaki (“we”, “us”, “the app”) is a free, ad-supported Android application for
           exam preparation. This policy explains what data we collect, why we collect it, who
@@ -210,12 +210,17 @@
           <ul>
             <li>We keep your account data for as long as your account exists.</li>
             <li>
-              <strong>To delete your data:</strong> email us at
-              <a href="mailto:contact.rupjyoti26@gmail.com">contact.rupjyoti26@gmail.com</a>
-              with the email address or phone number you signed up with. After verifying the
-              request, we will delete your Firebase Authentication account and your Firestore
-              progress and purchase records, typically within <strong>30 days</strong>.
+              <strong>To delete your account:</strong> in Mission Khaki 2.5.0 or later, open
+              Home → Account settings → Delete account and confirm your identity. Free and paid
+              accounts use the same deletion path. If you cannot access the app, email
+              <a href="mailto:contact.rupjyoti26@gmail.com?subject=Mission%20Khaki%20account%20deletion">contact.rupjyoti26@gmail.com</a>
+              with your sign-in email address or legacy phone number. After verifying ownership,
+              we process external requests typically within <strong>30 days</strong> and confirm
+              completion. See <a href="delete-account.html">Delete your Mission Khaki account</a>.
             </li>
+            <li>Deletion removes your Firebase Authentication identity, application-owned cloud profile and associated records, leaderboard entries and Premium grant. In-app deletion clears UID-scoped session and entitlement state. Shared device-only study progress, bookmarks and goals are not attributed to an account and remain until you clear app storage or uninstall.</li>
+            <li>We retain only one-way purchase-token fingerprints with a retired flag for fraud/replay prevention. These purchase blocklist records contain no account UID, name, email, phone number, raw purchase token or card data. A separate minimal deletion-status record keyed by the former Firebase UID records completion time, or a failed cleanup stage, to block stale sessions and permit safe retries. It contains no name, email or phone number.</li>
+            <li>Deleting a paid account ends its linked Premium access; a retired purchase cannot automatically be restored to a new account. Google Play’s transaction records are controlled by Google, and deletion does not issue a refund. Minimal security records remain for transaction integrity and replay prevention.</li>
             <li>Google may retain copies of deleted data in its backup systems for a limited period; this is outside our direct control but is governed by Google’s retention policy.</li>
             <li>Crash logs are kept only as long as needed to diagnose and fix technical problems.</li>
           </ul>
